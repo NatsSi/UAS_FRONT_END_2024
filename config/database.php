@@ -16,7 +16,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'sqlite'),
+    'default' => env('DB_CONNECTION', 'mongodb'),
 
     /*
     |--------------------------------------------------------------------------
@@ -30,6 +30,11 @@ return [
     */
 
     'connections' => [
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'dsn' => env('DB_URI', 'mongodb+srv://NatSi:natankeren@clusterback-end.eqyq2np.mongodb.net/?retryWrites=true&w=majority&appName=ClusterBack-End'),
+            'database' => 'yogo',
+        ],
 
         'sqlite' => [
             'driver' => 'sqlite',
